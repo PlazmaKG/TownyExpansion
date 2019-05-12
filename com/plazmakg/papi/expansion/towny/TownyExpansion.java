@@ -9,38 +9,44 @@ import java.util.ArrayList;
 import java.util.List;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 
 public class TownyExpansion
   extends PlaceholderExpansion
 {
+  @Override
   public boolean canRegister()
   {
     return Bukkit.getPluginManager().getPlugin(getPlugin()) != null;
   }
   
+  @Override
   public String getAuthor()
   {
     return "PlazmaKG";
   }
   
+  @Override
   public String getIdentifier()
   {
     return "towny";
   }
   
+  @Override
   public String getPlugin()
   {
     return "Towny";
   }
   
+  @Override
   public String getVersion()
   {
-    return "1.0";
+    return "1.1.0";
   }
   
-  public String onPlaceholderRequest(Player p, String identifier)
+  public String onPlaceholderRequest(OfflinePlayer p, String identifier)
   {
     if (p == null) {
       return "";
@@ -102,7 +108,7 @@ public class TownyExpansion
     return null;
   }
   
-  private String getPlayersSurname(Player p)
+  private String getPlayersSurname(OfflinePlayer p)
   {
     String title = "";
     try
@@ -116,7 +122,7 @@ public class TownyExpansion
     return title;
   }
   
-  private String getTownRank(Player p)
+  private String getTownRank(OfflinePlayer p)
   {
     String rank = "";
     try
@@ -139,7 +145,7 @@ public class TownyExpansion
     return rank;
   }
   
-  private String getNationRank(Player p)
+  private String getNationRank(OfflinePlayer p)
   {
     String rank = "";
     try
@@ -162,7 +168,7 @@ public class TownyExpansion
     return rank;
   }
   
-  private String getTownSize(Player p)
+  private String getTownSize(OfflinePlayer p)
   {
     String size = "";
     try
@@ -176,7 +182,7 @@ public class TownyExpansion
     return size;
   }
   
-  private String getNationSize(Player p)
+  private String getNationSize(OfflinePlayer p)
   {
     List<Town> Size = new ArrayList();
     int intsize = 0;
@@ -194,7 +200,7 @@ public class TownyExpansion
     return Integer.toString(intsize);
   }
   
-  private String getTownMayor(Player p)
+  private String getTownMayor(OfflinePlayer p)
   {
     String mayor = "";
     try
@@ -208,7 +214,7 @@ public class TownyExpansion
     return mayor;
   }
   
-  private String getNationKing(Player p)
+  private String getNationKing(OfflinePlayer p)
   {
     String king = "";
     try
@@ -222,7 +228,7 @@ public class TownyExpansion
     return king;
   }
   
-  private String getPlayersTown(Player p)
+  private String getPlayersTown(OfflinePlayer p)
   {
     String town = "";
     try
@@ -233,7 +239,7 @@ public class TownyExpansion
     return town;
   }
   
-  private String getPlayersNation(Player p)
+  private String getPlayersNation(OfflinePlayer p)
   {
     String nation = "";
     try
@@ -247,7 +253,7 @@ public class TownyExpansion
     return nation;
   }
   
-  private String getTownBalance(Player p)
+  private String getTownBalance(OfflinePlayer p)
   {
     String balance = "";
     try
@@ -261,7 +267,7 @@ public class TownyExpansion
     return balance;
   }
   
-  private String getNationBalance(Player p)
+  private String getNationBalance(OfflinePlayer p)
   {
     String balance = "";
     try
@@ -275,7 +281,7 @@ public class TownyExpansion
     return balance;
   }
   
-  private String getTownTag(Player p)
+  private String getTownTag(OfflinePlayer p)
   {
     String tag = "";
     try
@@ -289,7 +295,7 @@ public class TownyExpansion
     return tag;
   }
   
-  private String getNationTag(Player p)
+  private String getNationTag(OfflinePlayer p)
   {
     String tag = "";
     try
@@ -303,7 +309,7 @@ public class TownyExpansion
     return tag;
   }
   
-  private String getPlayersFriends(Player p)
+  private String getPlayersFriends(OfflinePlayer p)
   {
     String res = "";
     try
@@ -318,7 +324,7 @@ public class TownyExpansion
     return res;
   }
   
-  private String getPlayersTownyTitle(Player p)
+  private String getPlayersTownyTitle(OfflinePlayer p)
   {
     String title = "";
     try
@@ -332,7 +338,7 @@ public class TownyExpansion
     return title;
   }
   
-  private String getTownResidents(Player p)
+  private String getTownResidents(OfflinePlayer p)
   {
     String res = "";
     try
@@ -346,7 +352,7 @@ public class TownyExpansion
     return res;
   }
   
-  private String getNationResidents(Player p)
+  private String getNationResidents(OfflinePlayer p)
   {
     String res = "";
     try
@@ -360,7 +366,7 @@ public class TownyExpansion
     return res;
   }
   
-  private String getNationTowns(Player p)
+  private String getNationTowns(OfflinePlayer p)
   {
     String towns = "";
     try
