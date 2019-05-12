@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.8.0_212-8u212-b01-1-b01 (Oracle Corporation)
+Class-Path: lib/PlaceholderAPI-2.10.0.jar lib/Towny.jar lib/spigot-1.1
+ 3.2.jar
+X-COMMENT: Main-Class will be added automatically by build
+Main-Class: com.plazmakg.papi.expansion.towny.TownyExpansion
+
